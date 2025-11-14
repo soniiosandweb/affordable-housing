@@ -27,7 +27,7 @@
     padding: 8px 40px;
     position: relative;
     z-index: 11;
-    background-color: var(--color-black);
+    background-color: #000000cf;
 }
 .main_header.home_header.scroll .navbar {
     background-color: var(--color-header-bg);
@@ -197,7 +197,7 @@
         height: 45px;
     }
     .main_header .header_right .header_request_btn {
-        padding: 2px 3px;
+        padding: 4px 10px;
     }
     .header_right .header_call {
         font-size: 13px;
@@ -817,6 +817,7 @@
 .price_list_subtext {
     font-size: 0.7vw;
     margin-bottom: 1vw;
+    color: var(--color-white);
 }
 .price_list_popup_dialog h5 {
     display: none !important;
@@ -1069,7 +1070,7 @@
         gap: 5px;
     }
     .price_list_subtext {
-        font-size: 10px;
+        font-size: 11px;
     }
     .price_list_popup_dialog .enquire-form .form_label {
         font-size: 12px;
@@ -1083,7 +1084,7 @@
         padding: 12px;
     }
     .price_list_heading {
-        font-size: 12px;
+        font-size: 14px;
     }
     .price_list_popup_dialog .enquire-form .form-section #enquiry-form {
         min-height: 250px;

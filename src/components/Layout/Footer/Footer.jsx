@@ -22,7 +22,7 @@ const Footer = () => {
         // },        
         {
           name: "Location",
-          redirect: "/location",
+          redirect: "/locations",
           id: "location",
         },
         {
@@ -31,9 +31,9 @@ const Footer = () => {
           id: "properties",
         },
         {
-          name: "Gallery",
-          redirect: "/gallery",
-          id: "gallery",
+          name: "Why Us",
+          redirect: "/whychoose",
+          id: "whyus",
         },
         {
           name: "Contact Us",

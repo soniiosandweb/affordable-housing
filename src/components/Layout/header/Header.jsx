@@ -45,10 +45,10 @@ const Header = () => {
       redirect: "/properties",
     },
     {
-      title: "Gallery",
-      link: "#gallery",
-      redirect: "/gallery",
-      id: "gallery",
+      title: "Why US",
+      link: "#whyus",
+      redirect: "/whyus",
+      id: "whyus",
     },
     {
       title: "Contact Us",

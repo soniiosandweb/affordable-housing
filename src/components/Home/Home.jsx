@@ -25,7 +25,7 @@ const Home = () => {
             <AboutUs />
             <PrimeLocation />
             <EliteDevelopers />
-            {/* <WhyChoose /> */}
+            <WhyChoose />
             <ContactUs />
         </>
     )

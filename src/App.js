@@ -9,6 +9,8 @@ import PageNotFound from './components/Layout/PageNotFound';
 // import ConnectivityPage from './components/Connectivity/connectivity';
 // import GalleryPage from './components/Gallery/gallery';
 import ContactUsPage from './components/ContactUs/ContactUs';
+import WhyChoosePage from './components/WhyChoosePage/WhyChoosePage';
+import LocationPage from './components/LocationPage/LocationPage';
 // import AmenityPage from './components/Amenities/Amenities';
 // import PriceListPage from './components/PriceList/priceList';
 
@@ -40,17 +42,15 @@ function App() {
             <Route path='*' element={<PageNotFound />} />
 
             <Route path='/aboutus' element={<Home />} />
-            <Route path='/keyhighlight' element={<Home />} />
-            <Route path='/floorplan' element={<Home />} />
-            <Route path='/amenities' element={<Home />} />
-            <Route path='/connectivity' element={<Home />} />
-            <Route path='/gallery' element={<Home />} />
+            <Route path='/location' element={<Home />} />
+            <Route path='/properties' element={<Home />} />
+            <Route path='/whyus' element={<Home />} />
             <Route path='/contact' element={<Home />} />
           
             {/* <Route path='/floor-plan' element={<FloorPlanPage />} />
-            <Route path='/price-list' element={<PriceListPage />} />
-            <Route path='/connectivities' element={<ConnectivityPage />} />
-            <Route path='/galleries' element={<GalleryPage />} /> */}
+            <Route path='/price-list' element={<PriceListPage />} />*/}
+            <Route path='/locations' element={<LocationPage />} />
+            <Route path='/whychoose' element={<WhyChoosePage />} /> 
             <Route path='/contactus' element={<ContactUsPage />} />
             {/* <Route path='/amenity' element={<AmenityPage/>}/> */}
 

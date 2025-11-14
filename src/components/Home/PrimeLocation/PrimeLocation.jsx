@@ -1,6 +1,6 @@
 import "./PrimeLocation.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import anata1 from "../../../assests/images/prime_locations/anata-1.png";
+import anata1 from "../../../assests/images/prime_locations/anata-1.jpg";
 import anata2 from "../../../assests/images/prime_locations/anata-2.png";
 import anata3 from "../../../assests/images/prime_locations/anata-3.jpg";
 import anata4 from "../../../assests/images/prime_locations/anata-4.jpg";

@@ -37,7 +37,7 @@ const whyChooseList = [
 
 const WhyChoose = () => {
     return(
-        <div className="why_choose_section padding-top padding-bottom">
+        <div className="why_choose_section padding-top padding-bottom" id="whyus">
             <img src={whyChooseBg} alt="Why Choose" className="why_choose_bg" />
             <Container>
                 <Row>

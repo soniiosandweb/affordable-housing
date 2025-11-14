@@ -119,7 +119,7 @@
 }
 .banner_slider_lists_item {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 5px;
     font-size: 16px;
     line-height: 27px;
@@ -128,8 +128,8 @@
     width: 100%;
 }
 .banner_slider_lists_item img {
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     object-fit: contain;
 }
 .hand_img_banner {
