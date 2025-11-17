@@ -47,6 +47,8 @@
 }
 .prime_location_overview {
     flex: 0 0 290px;
+    display: flex;
+    flex-direction: column;
 }
 .prime_location_gallery {
     flex: 1;
@@ -74,6 +76,8 @@
     padding: 5px 20px;
     border: 1px solid var(--color-yellow);
     margin-top: auto;
+    margin-bottom: 40px;
+    width: max-content;
 }
 .prime_location_btn:hover,
 .prime_location_btn:active {
@@ -82,15 +86,76 @@
     border: 1px solid var(--color-yellow) !important;
 }
 .prime_location_btn.load_more {
-    background-color: var(--color-yellow);
-    color: var(--color-black);
+    background-color: #565656;
+    color: var(--color-white);
     width: max-content;
     margin: auto;
+    border-color: #565656;
 }
 .prime_location_btn.load_more:hover,
 .prime_location_btn.load_more:active {
-    background-color: var(--color-transparent) !important;
-    color: var(--color-white) !important;
+    background-color: var(--color-yellow) !important;
+    color: var(--color-black) !important;
+}
+.prime_location_gallery .gallery-container .thumb-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    flex: 1;
+    padding-bottom: 40px;
+}
+.prime_location_gallery .gallery-container .thumb-list .thumb {
+    height: 185px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+.prime_location_gallery .gallery-container {
+    display: flex;
+    gap: 10px;
+}
+.prime_locations_grids_item:nth-child(2n) .prime_location_gallery .gallery-container {
+    flex-direction: row-reverse;
+}
+.prime_location_gallery .main-image-area {
+    flex: 1;
+    max-width: 380px;
+}
+.prime_location_gallery .main-image-area .main-image {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    max-height: 380px;
+    width: 100%;
+}
+.prime_location_gallery .main-image-area .gallery_arrows {
+    padding-top: 10px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+}
+.prime_location_gallery .main-image-area .gallery_arrows .arrow {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #1E1E1E !important;
+}
+.prime_location_gallery .main-image-area .gallery_arrows .arrow:hover {
+    background-color: var(--color-yellow) !important;
+    color: var(--color-black);
+}
+.prime_location_gallery .main-image-area .gallery_arrows .arrow svg {
+    font-size: 18px;
+}
+@media (max-width: 1399px) {
+    .prime_location_gallery .main-image-area {
+        max-width: 320px;
+    }
 }
 @media (max-width: 1199px){
     .prime_location_top .main_heading {
@@ -107,6 +172,20 @@
         gap: 2rem;
     }
 }
+@media (max-width: 991px) {
+    .prime_location_gallery .main-image-area {
+        max-width: 280px;
+    }
+    .prime_location_gallery .main-image-area .main-image {
+        max-height: 320px;
+    }
+    .prime_location_gallery .gallery-container .thumb-list .thumb {
+        height: 155px;
+    }
+    .prime_location_btn  {
+        margin-bottom: 10px;
+    }
+}
 @media (max-width: 767px){
     .prime_location_top .main_heading {
         font-size: 25px;
@@ -116,5 +195,32 @@
     }
     .gallery_prime_location {
         grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .prime_location_gallery .gallery-container,
+    .prime_locations_grids_item:nth-child(2n) .prime_location_gallery .gallery-container {
+        flex-direction: column-reverse;
+    }
+    
+    .prime_location_gallery .gallery-container .thumb-list .thumb {
+        height: 160px;
+    }
+    .prime_location_gallery .gallery-container .thumb-list {
+        padding-bottom: 0;
+    }
+    .prime_location_gallery .main-image-area .main-image {
+        height: 400px;
+        max-height: unset;
+    }
+    .prime_location_gallery .main-image-area {
+        max-width: 100%;
+    }
+}
+@media (max-width: 420px) {
+    .prime_location_gallery .gallery-container .thumb-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .prime_location_gallery .main-image-area .main-image {
+        height: 300px;
     }
 }

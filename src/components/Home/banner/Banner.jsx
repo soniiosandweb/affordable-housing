@@ -2,7 +2,7 @@ import "./Banner.css";
 import Slider from "react-slick";
 import banner2 from "../../../assests/images/banner/banner-new-2.png";
 import { Col, Container, Row } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import upArrow from "../../../assests/images/banner/up-arrow.png";
 // import handImg from "../../../assests/images/banner/handimg.png";
 import banner1 from "../../../assests/images/banner/banner-new-1.png";
@@ -16,6 +16,12 @@ import bannerRight3 from "../../../assests/images/banner/banner3-right.png";
 import bannerRight4 from "../../../assests/images/banner/banner4-right.png";
 import bannerRight5 from "../../../assests/images/banner/banner5-right.png";
 
+import bannerRightMobile1 from "../../../assests/images/banner/banner1-right-mobile.png";
+import bannerRightMobile2 from "../../../assests/images/banner/banner2-right-mobile.png";
+import bannerRightMobile3 from "../../../assests/images/banner/banner3-right-mobile.png";
+import bannerRightMobile4 from "../../../assests/images/banner/banner4-right-mobile.png";
+import bannerRightMobile5 from "../../../assests/images/banner/banner5-right-mobile.png";
+
 const slides = [
     {
         title: "Ananta Aspire - Peaceful Living with Landscaped Gardens & Walking Tracks",
@@ -23,6 +29,7 @@ const slides = [
         image: banner1,
         imageAlt: "Ananta Aspire - Peaceful Living with Landscaped Gardens & Walking Tracks",
         right: bannerRight1,
+        mobile: bannerRightMobile1,
         lists: [
             "Fully Automated smart homes", 
             "Earth Quake Resistant Structure", 
@@ -37,6 +44,7 @@ const slides = [
         image: banner2,
         imageAlt: "Book Your Luxury Home at Affinity Greens Today",
         right: bannerRight2,
+        mobile: bannerRightMobile2,
         lists: [
             "Amphithreatre for meditation and yoga", 
             "Roof Top Party Area", 
@@ -51,6 +59,7 @@ const slides = [
         image: banner3,
         imageAlt: "Live Green, Live Luxurious-Join a Community That Cares About Tomorrow",
         right: bannerRight3,
+        mobile: bannerRightMobile3,
         lists: [
             "Landscaped gardens, parks and outdoor", 
             "Green Residential Project", 
@@ -65,6 +74,7 @@ const slides = [
         image: banner4,
         imageAlt: "Exotic Grandeur-Where Impeccable Craftsmanship Meets Sophisticated Living",
         right: bannerRight4,
+        mobile: bannerRightMobile4,
         lists: [
             "Pickle Ball Court", 
             "Kids Play Areas", 
@@ -79,6 +89,7 @@ const slides = [
         image: banner5,
         imageAlt: "Live Elevated at Hermitage Centralis",
         right: bannerRight5,
+        mobile: bannerRightMobile5,
         lists: [
             "Imposing 60 ft. Wide Entrance", 
             "Water Treatment & Waste Decomposer Plants",
@@ -107,13 +118,21 @@ const Banner = () => {
         beforeChange: (oldIndex, newIndex) => setActiveSlide(newIndex),
     };
 
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return(
         <div className="banner_slider_section">
             <Slider {...settings}>
                 {slides.map((item,i) => (
                     <div className="banner_slider_item" key={i}>
                         <img src={item.image} alt={item.imageAlt} className="banner_bg_image" />
-                        <img src={item.right} alt={item.imageAlt} className="banner_right_image" />
+                        <img src={isMobile ? item.mobile : item.right} alt={item.imageAlt} className="banner_right_image" />
                         <div className="banner_context_form_flex">
                             <Container fluid>
                                 <Row>

@@ -50,7 +50,6 @@ function App() {
             <Route path='/locations' element={<LocationPage />} />
             <Route path='/whychoose' element={<WhyChoosePage />} /> 
             <Route path='/contactus' element={<ContactUsPage />} />
-            {/* <Route path='/amenity' element={<AmenityPage/>}/> */}
 
           </Route>
         </Routes>

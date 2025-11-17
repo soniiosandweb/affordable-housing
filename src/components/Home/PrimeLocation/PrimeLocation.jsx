@@ -48,7 +48,7 @@ import hermitage5 from "../../../assests/images/prime_locations/hermitage-5.jpg"
 import hermitage6 from "../../../assests/images/prime_locations/hermitage-6.png";
 import hermitage7 from "../../../assests/images/prime_locations/hermitage-7.jpg";
 
-import { ImageList, ImageListItem } from "@mui/material";
+// import { ImageList, ImageListItem } from "@mui/material";
 import Lightbox from 'yet-another-react-lightbox';
 import { Counter, Fullscreen, Zoom } from 'yet-another-react-lightbox/plugins';
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
@@ -56,6 +56,7 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import { useState } from "react";
 import { useFormContext } from "../../Layout/FormContext";
+import PropertiesGallery from "./PropertiesGallery";
 
 const PrimeLocation = () => {
 
@@ -66,14 +67,14 @@ const PrimeLocation = () => {
     const [lightboxProject, setLightboxProject] = useState(null);
     const [lightboxImage, setLightboxImage] = useState(null);
 
-    function srcset(image, size, rows = 1, cols = 1) {
-        return {
-          src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-          srcSet: `${image}?w=${size * cols}&h=${
-            size * rows
-          }&fit=crop&auto=format&dpr=2 2x`,
-        };
-    }
+    // function srcset(image, size, rows = 1, cols = 1) {
+    //     return {
+    //       src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
+    //       srcSet: `${image}?w=${size * cols}&h=${
+    //         size * rows
+    //       }&fit=crop&auto=format&dpr=2 2x`,
+    //     };
+    // }
 
     const handleLoadMore = () => {
         setVisibleCount(prev => prev + 5);
@@ -372,7 +373,7 @@ const PrimeLocation = () => {
                                             </div>
 
                                             <div className="prime_location_gallery">
-                                                <ImageList
+                                                {/* <ImageList
                                                     variant="quilted"
                                                     cols={5}
                                                     gap={8}
@@ -394,7 +395,8 @@ const PrimeLocation = () => {
                                                     ))}
 
                                                     
-                                                </ImageList>
+                                                </ImageList> */}
+                                                <PropertiesGallery images={item.images} />
                                             </div>
                                         </div>
                                     </div>
